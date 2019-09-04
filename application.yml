@@ -1,0 +1,18 @@
+server:
+  port: 8761
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+     defaultZone: http://user:123@localhost:8761/eureka
+  instance:
+#  心跳的时间，生产使用默认值
+#    lease-renewal-interval-in-seconds: 5
+spring:
+  security:
+    user:
+      name: user
+      password: 123
